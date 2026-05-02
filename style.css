@@ -36,10 +36,10 @@ body::before {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* 👈 đổi từ center → đẩy lên trên */
+  align-items: center; /* 👈 QUAN TRỌNG: căn giữa lại */
   gap: 120px;
 
-  padding: 80px 40px 0 40px; /* 👈 tạo khoảng cách phía trên */
+  padding: 0 40px; /* 👈 bỏ padding top */
 }
 
 /* TEXT */
@@ -191,7 +191,7 @@ body::before {
     gap: 30px;
     padding: 60px 20px 0 20px; /* 👈 vẫn đẩy lên nhẹ */
     text-align: center;
-    justify-content: flex-start; /* 👈 giữ ở trên */
+    justify-content: center; /* 👈 giữ ở trên */
   }
 
   .title{
