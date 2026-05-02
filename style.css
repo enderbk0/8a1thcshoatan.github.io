@@ -9,19 +9,16 @@
 body {
   min-height: 100vh;
   color: white;
-  overflow-x: hidden; /* 👈 fix tràn ngang */
+  overflow-x: hidden;
+
+  /* 👇 THAY VIDEO = ẢNH */
+  background-image: url('background.jpg'); /* đổi tên file nếu cần */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* VIDEO NỀN */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
+/* ❌ ĐÃ XÓA VIDEO NỀN */
 
 /* ÁNH SÁNG */
 body::before {
