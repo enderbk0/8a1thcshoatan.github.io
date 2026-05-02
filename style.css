@@ -33,15 +33,13 @@ body::before {
 
 /* ===== HERO ===== */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 60px); /* 👈 trừ luôn footer + cảm giác lệch */
   display: flex;
   justify-content: center;
-  align-items: center; /* 👈 căn giữa thật */
+  align-items: center;
   gap: 120px;
 
   padding: 0 40px;
-
-  transform: translateY(-2%); /* 👈 đẩy lên nhẹ cho đẹp */
 }
 
 /* TEXT */
@@ -119,16 +117,12 @@ body::before {
   z-index: 1000;
 }
 
-.logo-icon {
+/* nếu m dùng ảnh logo thì thêm */
+.logo-icon img {
   width: 45px;
   height: 45px;
-  background: linear-gradient(45deg,#00ff88,#00ccff);
-  border-radius: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: black;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .logo-text {
@@ -171,6 +165,11 @@ body::before {
 
   background: rgba(0,0,0,0.2);
   backdrop-filter: blur(6px);
+
+  height: 40px; /* 👈 cố định để tính layout chuẩn */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer span{
@@ -188,14 +187,12 @@ body::before {
 @media (max-width: 768px){
 
   .hero{
-    height: 100vh;
+    height: calc(100vh - 50px); /* 👈 mobile footer nhỏ hơn */
     flex-direction: column;
     gap: 30px;
-    padding: 0 20px; /* 👈 bỏ padding top gây lệch */
+    padding: 0 20px;
     justify-content: center;
     align-items: center;
-
-    transform: translateY(-3%); /* 👈 mobile đẩy lên nhẹ */
   }
 
   .title{
@@ -208,46 +205,19 @@ body::before {
     margin-top: 15px;
   }
 
-  .video-link {
-    width: 100%;
-    max-width: 450px;
-    display: block;
-  }
-
   .glass{
     width: 100%;
-    height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 18px;
-  }
-
-  .video-note {
-    font-size: 10px;
-    top: 8px;
-    left: 10px;
-  }
-
-  .video-info {
-    font-size: 10px;
-    bottom: 8px;
-    right: 10px;
-    padding: 4px 8px;
-    border-radius: 8px;
   }
 
   .play {
     font-size: 40px;
   }
 
-  .logo-box{
-    top: 15px;
-    left: 15px;
-  }
-
-  .logo-icon {
+  .logo-icon img {
     width: 35px;
     height: 35px;
-    border-radius: 12px;
   }
 
   .logo-text {
@@ -255,7 +225,7 @@ body::before {
   }
 
   .footer{
+    height: 35px;
     font-size: 8px;
-    padding: 4px 0;
   }
 }
