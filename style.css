@@ -8,9 +8,10 @@
 
 body {
   min-height: 100vh;
-  height: 100vh;
+  height: 100vh; /* 👈 thêm dòng này */
+  overflow: hidden; /* 👈 chặn scroll */
+
   color: white;
-  overflow-x: hidden;
 
   /* 👇 THAY VIDEO = ẢNH */
   background-image: url('background1.jpg'); /* đổi tên file nếu cần */
