@@ -7,20 +7,15 @@
 }
 
 body {
-  min-height: 100vh;
-  height: 100vh; /* 👈 thêm dòng này */
-  overflow: hidden; /* 👈 chặn scroll */
-
+  height: 100vh;
+  overflow: hidden;
   color: white;
 
-  /* 👇 THAY VIDEO = ẢNH */
-  background-image: url('background1.jpg'); /* đổi tên file nếu cần */
+  background-image: url('background1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-/* ❌ ĐÃ XÓA VIDEO NỀN */
 
 /* ÁNH SÁNG */
 body::before {
@@ -35,12 +30,12 @@ body::before {
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 100vh;
+  height: 100vh; /* 👈 FIX */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 120px;
-  padding: 40px;
+  padding: 0 40px; /* 👈 bỏ padding trên dưới */
 }
 
 /* TEXT */
@@ -183,11 +178,12 @@ body::before {
 @media (max-width: 768px){
 
   .hero{
+    height: 100vh; /* 👈 FIX */
     flex-direction: column;
     gap: 30px;
-    padding: 90px 20px 80px 20px;
+    padding: 0 20px; /* 👈 FIX */
     text-align: center;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .title{
