@@ -6,9 +6,12 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
-  height: 100vh;
+html, body {
+  height: 100%;
   overflow: hidden;
+}
+
+body {
   color: white;
 
   background-image: url('background1.jpg');
@@ -30,12 +33,13 @@ body::before {
 
 /* ===== HERO ===== */
 .hero {
-  height: 100vh; /* 👈 FIX */
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 👈 đổi từ center → đẩy lên trên */
   gap: 120px;
-  padding: 0 40px; /* 👈 bỏ padding trên dưới */
+
+  padding: 80px 40px 0 40px; /* 👈 tạo khoảng cách phía trên */
 }
 
 /* TEXT */
@@ -154,13 +158,17 @@ body::before {
 
 /* FOOTER */
 .footer{
-  position:fixed;
-  bottom:5px;
-  width:100%;
-  text-align:center;
-  font-size:10px;
-  letter-spacing:2px;
-  color:rgba(255,255,255,0.5);
+  position: fixed;
+  bottom: 0; /* 👈 fix sọc trắng */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.6);
+
+  background: rgba(0,0,0,0.2); /* 👈 che nền */
+  backdrop-filter: blur(6px);
 }
 
 .footer span{
@@ -178,12 +186,12 @@ body::before {
 @media (max-width: 768px){
 
   .hero{
-    height: 100vh; /* 👈 FIX */
+    height: 100vh;
     flex-direction: column;
     gap: 30px;
-    padding: 0 20px; /* 👈 FIX */
+    padding: 60px 20px 0 20px; /* 👈 vẫn đẩy lên nhẹ */
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start; /* 👈 giữ ở trên */
   }
 
   .title{
@@ -244,7 +252,6 @@ body::before {
 
   .footer{
     font-size: 8px;
-    padding: 0 10px;
-    bottom: 8px;
+    padding: 4px 0;
   }
 }
