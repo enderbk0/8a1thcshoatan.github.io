@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 
   /* 👇 THAY VIDEO = ẢNH */
-  background-image: url('background.jpg'); /* đổi tên file nếu cần */
+  background-image: url('background1.jpg'); /* đổi tên file nếu cần */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
