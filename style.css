@@ -36,10 +36,12 @@ body::before {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* 👈 QUAN TRỌNG: căn giữa lại */
+  align-items: center; /* 👈 căn giữa thật */
   gap: 120px;
 
-  padding: 0 40px; /* 👈 bỏ padding top */
+  padding: 0 40px;
+
+  transform: translateY(-2%); /* 👈 đẩy lên nhẹ cho đẹp */
 }
 
 /* TEXT */
@@ -159,7 +161,7 @@ body::before {
 /* FOOTER */
 .footer{
   position: fixed;
-  bottom: 0; /* 👈 fix sọc trắng */
+  bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
@@ -167,7 +169,7 @@ body::before {
   letter-spacing: 2px;
   color: rgba(255,255,255,0.6);
 
-  background: rgba(0,0,0,0.2); /* 👈 che nền */
+  background: rgba(0,0,0,0.2);
   backdrop-filter: blur(6px);
 }
 
@@ -189,9 +191,11 @@ body::before {
     height: 100vh;
     flex-direction: column;
     gap: 30px;
-    padding: 60px 20px 0 20px; /* 👈 vẫn đẩy lên nhẹ */
-    text-align: center;
-    justify-content: center; /* 👈 giữ ở trên */
+    padding: 0 20px; /* 👈 bỏ padding top gây lệch */
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(-3%); /* 👈 mobile đẩy lên nhẹ */
   }
 
   .title{
